@@ -27,18 +27,11 @@ Menyimpan informasi klien.
 ### 2. `tbl_agenda`
 Menyimpan jadwal kegiatan klien.
 
-| Kolom       | Tipe          | Keterangan                           |
-|------------|---------------|--------------------------------------|
-| id         | INT           | Primary Key, Auto Increment          |
-| tanggal    | DATE          | Tanggal kegiatan                     |
-| kegiatan   | VARCHAR(255)  | Nama kegiatan                        |
-| kode_klien | VARCHAR(10)   | Foreign Key ke `tbl_klien`          |
-| keterangan | TEXT          | Catatan tambahan                     |
-
-**Contoh Data:**
-- 2026-02-10 – Meeting Proposal – K101 – Bawa dokumen lengkap  
-- 2026-02-12 – Follow-up Order – K102 – Konfirmasi harga dan stok  
-- 2026-02-13 – Survey Lokasi – K103 – Pastikan lokasi sesuai rencana  
+| Tanggal    | Kode Klien | Nama Klien   | Kegiatan         | Keterangan                 |
+|-----------|------------|--------------|----------------|-----------------------------|
+| 2026-02-10 | K101      | PT. Alfa     | Meeting Proposal | Bawa dokumen lengkap       |
+| 2026-02-12 | K102      | CV. Beta     | Follow-up Order | Konfirmasi harga dan stok  |
+| 2026-02-13 | K103      | UD. Gamma    | Survey Lokasi   | Pastikan lokasi sesuai rencana |
 
 ---
 
@@ -48,4 +41,5 @@ Menyimpan jadwal kegiatan klien.
 
 ```sql
 CREATE DATABASE jadwal_klien;
+
 mysql -u [username] -p jadwal_klien < database.sql
